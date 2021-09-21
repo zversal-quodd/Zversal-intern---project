@@ -1,0 +1,97 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman';
+}
+
+ :root {
+    --text-clr:black;
+}
+
+p {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-clr);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--text-clr);
+}
+h1{
+    color: white
+}
+
+h2 {
+    color: var(--text-clr);
+    font-size: 1.5rem;
+}
+
+.main_cart {
+    background: #fff;
+}
+
+.cart {
+    border: none;
+}
+
+.product_img img {
+    min-width: 200px;
+    max-height: 200px;
+}
+
+.product_name {
+    color: black;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.title p {
+    font-size: 0.9rem;
+    font-weight: 1000;
+}
+
+
+.link {
+    line-height: 16px;
+    width: 45px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #495057;
+}
+
+.item input {
+    line-height: 22px;
+    padding: 3px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: #495057;
+    outline: none !important;
+}
+
+.link:focus {
+    box-shadow: none;
+}
+
+.price_indiv p {
+    font-size: 1.1rem;
+}
+
+.fa-heart:hover {
+    color: red;
+}
