@@ -1,11 +1,11 @@
-service: employee-api-${env.DEPLOYMENT_NAME}
+service: employee-api-${env:DEPLOYMENT_NAME}
 frameworkVersion: '3'
 
 provider:
   name: aws
   stage: dev
   runtime: nodejs16.x
-  region: ${env.AWS_REGION_}
+  region: ${env.AWS_REGION}
   
 
 
