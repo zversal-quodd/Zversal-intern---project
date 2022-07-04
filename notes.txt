@@ -1,0 +1,18 @@
+
+// let cachedDb = null;
+
+// async function connectToDatabase() {
+//   if (cachedDb) {
+//     return cachedDb;
+//   }
+
+// const client = await MongoClient.connect
+// ("db", {
+//   useNewUrlParser: true});
+
+// const db = await client.db("employeeDB");
+
+// cachedDb = db;
+// return db;
+
+// }
