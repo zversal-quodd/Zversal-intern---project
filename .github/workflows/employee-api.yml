@@ -31,6 +31,8 @@ jobs:
         
       - name: Install Serverless Framework
         run: npm install -g serverless
+        
+      
           
 
       - name: Configure AWS Credentials
