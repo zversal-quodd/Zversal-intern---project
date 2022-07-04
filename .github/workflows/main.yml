@@ -3,7 +3,7 @@ name: Deploy_Lambda
 on:
   create:
     tags:
-    - v*
+    - va*
 
 jobs:
   deploy_lambda:
