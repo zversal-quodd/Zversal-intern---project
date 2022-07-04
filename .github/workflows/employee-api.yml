@@ -1,0 +1,54 @@
+name: employee-api
+
+on:
+  push:
+    tags:
+      - 'v*'
+      
+env:
+  AWS_REGION: us-east-2
+  DEPLOYMENT_NAME: ar
+  
+
+jobs:
+  deploy_lambda:
+    runs-on: ubuntu-latest
+    environment:
+      name: dev
+    defaults: 
+      run:
+        working-directory: ./
+    
+    
+    steps: 
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Install Serverless Framework
+        run: npm install -g serverless
+          
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: AKIAXJL77BAHCA2Q5WVX
+          aws-secret-access-key: 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
+          aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: employee-api-assets-role
+          role-external-id: employee
+          role-duration-seconds: 1200
+          role-session-name: EmployeeApiDeploySession
+          
+          
+      
+      - name: Deploy lambda function
+        run: sls deploy --stage dev
+          
+          
+
+
