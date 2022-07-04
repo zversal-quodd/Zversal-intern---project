@@ -1,12 +1,18 @@
-plugins:
-  - serverless-offline
-
-service: serverless-http-api
+service: employee-api-${env.DEPLOYMENT_NAME}
 frameworkVersion: '3'
 
 provider:
   name: aws
+  stage: dev
   runtime: nodejs16.x
+  region: ${env.AWS_REGION_}
+  
+  
+
+plugins:
+  - serverless-offline
+
+
 
 functions:
   fetchAllEmployees:
