@@ -5,6 +5,8 @@ provider:
   name: aws
   runtime: nodejs16.x
   region: ${env:AWS_REGION}
+  environment:
+    MongoDB_Connection: ${env:MongoDB_Connection}
   
 
 
